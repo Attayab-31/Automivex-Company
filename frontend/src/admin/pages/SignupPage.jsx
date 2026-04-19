@@ -12,7 +12,6 @@ export default function SignupPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
-  const { login } = useAdminAuth();
   const navigate = useNavigate();
 
   const handleSubmit = useCallback(

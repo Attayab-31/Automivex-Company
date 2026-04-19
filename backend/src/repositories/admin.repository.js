@@ -21,6 +21,19 @@ const adminDocumentSchema = z.object({
   passwordResetExpiresAt: z.date().optional(), // When the reset token expires
 });
 
+/**
+ * Transform MongoDB document for validation
+ * Converts ObjectId to string for schema validation
+ */
+function transformAdminDocument(doc) {
+  if (!doc) return null;
+  
+  return {
+    ...doc,
+    _id: doc._id ? doc._id.toString() : undefined,  // ✅ Convert ObjectId to string
+  };
+}
+
 // AdminUser type (for JSDoc documentation)
 // @typedef {Object} AdminUser
 // @property {string} _id - MongoDB document ID
@@ -77,12 +90,7 @@ export async function findAdminByEmail(email) {
     return null;
   }
 
-  // Convert ObjectId to string for schema validation
-  if (admin._id) {
-    admin._id = admin._id.toString();
-  }
-
-  return adminDocumentSchema.parse(admin);
+  return adminDocumentSchema.parse(transformAdminDocument(admin));  // ✅ Transform before parse
 }
 
 /**
@@ -107,12 +115,7 @@ export async function findAdminById(id) {
     return null;
   }
 
-  // Convert ObjectId to string for schema validation
-  if (admin._id) {
-    admin._id = admin._id.toString();
-  }
-
-  return adminDocumentSchema.parse(admin);
+  return adminDocumentSchema.parse(transformAdminDocument(admin));  // ✅ Transform before parse
 }
 
 /**

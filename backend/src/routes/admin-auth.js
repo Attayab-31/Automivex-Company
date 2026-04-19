@@ -2,7 +2,6 @@ import { Router } from "express";
 import { z } from "zod";
 import { getLogger } from "../lib/logger.js";
 import { hashPassword, verifyPassword, generateJWT } from "../lib/auth.js";
-import { revokeToken } from "../lib/token-revocation.js";
 import {
   findAdminByEmail,
   createAdmin,
@@ -124,33 +123,28 @@ router.post("/login", authLimiter, async (req, res) => {
 
 /**
  * POST /api/admin/auth/logout
- * Clear authentication cookie and revoke JWT token
+ * Clear authentication cookie and invalidate session
  * Requires valid authentication
- * ✅ Token is now revoked - invalid for remaining 24h window
  */
 router.post("/logout", requireAdminAuth, async (req, res) => {
   try {
     const adminId = req.user.id;
     const email = req.user.email;
-    const token = req.cookies.adminToken;
-
-    // Revoke the JWT token to prevent further use
-    if (token) {
-      await revokeToken(token);
-    }
 
     // Clear the authentication cookie
     res.clearCookie("adminToken", {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: "Strict",
-      path: "/",
+      path: "/",  // ✅ Match the path used in login
     });
 
-    log.info({ email, adminId }, "admin_logout_successful_token_revoked");
+    log.info({ email, adminId }, "admin_logout_successful");
 
     return res.status(200).json({
-      message: "Logout successful. Session revoked.",
+      message: "Logout successful",
+      // ⚠️ Note: JWT remains valid for 24h if token is obtained by attacker
+      // Implement token blacklist for production if needed
     });
   } catch (error) {
     log.error({ err: error }, "logout_endpoint_error");

@@ -127,11 +127,15 @@ export function AdminAuthProvider({ children }) {
     setError(null);
     try {
       const response = await adminApi.login(email, password);
-      setIsAuthenticated(true);
-      if (response.admin) {
-        setAdmin(response.admin);
-        saveAuthToStorage(response.admin); // ✅ Save to localStorage after login
+      
+      // ✅ Validate that admin data was returned
+      if (!response.admin) {
+        throw new Error("No user data returned from server");
       }
+      
+      setIsAuthenticated(true);
+      setAdmin(response.admin);
+      saveAuthToStorage(response.admin); // ✅ Save to localStorage after login
       return true;
     } catch (err) {
       setError(err.message);

@@ -97,10 +97,15 @@ export default function FormField({
     onBlur?.(e);
   };
 
+  const handleChange = (e) => {
+    // Extract value from event and pass to parent
+    onChange?.(e.target.value);
+  };
+
   const commonInputProps = {
     id,
     value,
-    onChange,
+    onChange: handleChange,
     onBlur: handleBlur,
     onFocus: handleFocus,
     placeholder,

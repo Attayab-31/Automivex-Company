@@ -16,6 +16,19 @@ const siteContentDocumentSchema = z.object({
 });
 
 /**
+ * Transform MongoDB document for validation
+ * Converts ObjectId to string for schema validation
+ */
+function transformSiteContentDocument(doc) {
+  if (!doc) return null;
+  
+  return {
+    ...doc,
+    _id: doc._id ? doc._id.toString() : DOCUMENT_ID,  // ✅ Convert ObjectId to string
+  };
+}
+
+/**
  * Find published site content.
  * Returns null if no published content exists.
  */
@@ -28,7 +41,7 @@ export async function findPublishedSiteContent() {
     return null;
   }
 
-  const parsedDocument = siteContentDocumentSchema.safeParse(document);
+  const parsedDocument = siteContentDocumentSchema.safeParse(transformSiteContentDocument(document));  // ✅ Transform before parse
 
   if (!parsedDocument.success) {
     throw new Error("Site content document is invalid.");
@@ -55,7 +68,7 @@ export async function findDraftSiteContent() {
     return null;
   }
 
-  const parsedDocument = siteContentDocumentSchema.safeParse(document);
+  const parsedDocument = siteContentDocumentSchema.safeParse(transformSiteContentDocument(document));  // ✅ Transform before parse
 
   if (!parsedDocument.success) {
     throw new Error("Site content document is invalid.");

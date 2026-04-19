@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://automivex.com/sitemap.xml

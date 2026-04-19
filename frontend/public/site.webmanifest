@@ -1,0 +1,16 @@
+{
+  "name": "Automivex",
+  "short_name": "Automivex",
+  "description": "Digital engineering for AI/ML, automation, computer vision, Shopify, and SaaS delivery.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#04101d",
+  "theme_color": "#04101d",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

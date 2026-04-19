@@ -1,0 +1,6 @@
+Contact: mailto:legal@automivex.com
+Contact: https://automivex.com/#contact-details
+Policy: https://automivex.com/privacy/
+Hiring: https://automivex.com/
+Preferred-Languages: en
+Expires: 2027-04-03T00:00:00.000Z

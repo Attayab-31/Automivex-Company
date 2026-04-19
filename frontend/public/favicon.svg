@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Automivex">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c2037" />
+      <stop offset="100%" stop-color="#04101d" />
+    </linearGradient>
+    <linearGradient id="mark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#59d8ff" />
+      <stop offset="100%" stop-color="#f4b767" />
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#bg)" />
+  <path
+    d="M64 18 95 98h-14.2l-6.6-17.6H53.4L46.8 98H33L64 18Zm6.2 49.9L63.8 49l-6.7 18.9h13.1Z"
+    fill="url(#mark)"
+  />
+</svg>

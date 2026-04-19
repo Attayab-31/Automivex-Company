@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Automivex social share image">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071420" />
+      <stop offset="55%" stop-color="#0d1f34" />
+      <stop offset="100%" stop-color="#11192b" />
+    </linearGradient>
+    <radialGradient id="glowA" cx="15%" cy="15%" r="80%">
+      <stop offset="0%" stop-color="#59d8ff" stop-opacity="0.42" />
+      <stop offset="100%" stop-color="#59d8ff" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glowB" cx="90%" cy="18%" r="70%">
+      <stop offset="0%" stop-color="#f4b767" stop-opacity="0.34" />
+      <stop offset="100%" stop-color="#f4b767" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="mark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#59d8ff" />
+      <stop offset="100%" stop-color="#f4b767" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect width="1200" height="630" fill="url(#glowA)" />
+  <rect width="1200" height="630" fill="url(#glowB)" />
+  <g opacity="0.22" stroke="#a8dbff" fill="none">
+    <path d="M70 500h420l90-168h230l86-150h244" stroke-width="3" />
+    <circle cx="70" cy="500" r="9" fill="#59d8ff" />
+    <circle cx="490" cy="500" r="9" fill="#59d8ff" />
+    <circle cx="580" cy="332" r="9" fill="#59d8ff" />
+    <circle cx="810" cy="332" r="9" fill="#f4b767" />
+    <circle cx="896" cy="182" r="9" fill="#f4b767" />
+  </g>
+  <g transform="translate(96 96)">
+    <rect width="104" height="104" rx="26" fill="rgba(255,255,255,0.04)" />
+    <path
+      d="M52 10 90 108H72.6l-8-21.6H39.2L31.1 108H14l38-98Zm7.7 61.1L51.9 47 43.8 71.1h15.9Z"
+      fill="url(#mark)"
+    />
+  </g>
+  <text x="96" y="282" fill="#f3f9ff" font-size="72" font-family="'Sora', Arial, sans-serif" font-weight="700">
+    Automivex
+  </text>
+  <text x="96" y="362" fill="#d7e9fb" font-size="56" font-family="'Sora', Arial, sans-serif" font-weight="600">
+    Digital engineering with real delivery systems
+  </text>
+  <text x="96" y="438" fill="#9ab0c9" font-size="30" font-family="'Plus Jakarta Sans', Arial, sans-serif">
+    AI/ML, automation, computer vision, Shopify, and SaaS delivery
+  </text>
+  <text x="96" y="484" fill="#9ab0c9" font-size="30" font-family="'Plus Jakarta Sans', Arial, sans-serif">
+    Project briefs, verified proof metrics, trust pages, and conversion-ready ops
+  </text>
+  <g transform="translate(96 530)">
+    <rect width="318" height="56" rx="28" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.14)" />
+    <text x="28" y="36" fill="#ecf6ff" font-size="28" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="700">
+      automivex.com
+    </text>
+  </g>
+</svg>

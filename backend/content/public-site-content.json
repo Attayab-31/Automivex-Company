@@ -1,0 +1,490 @@
+{
+  "publishedAt": "2026-04-16T00:00:00Z",
+  "sourceLabel": "Live production content",
+  "hero": {
+    "eyebrow": "AI & Automation Engineering",
+    "title": "Ship AI, automation, SaaS, and Shopify—without the overhead.",
+    "description": "We help founders, operators, and growing teams move faster: AI features, workflow automation, product builds, Shopify improvements, and urgent fixes.",
+    "primaryCta": {
+      "label": "See what we build",
+      "href": "#services"
+    },
+    "secondaryCta": {
+      "label": "Get a scoped plan",
+      "href": "#book-call"
+    },
+    "trustLine": "Trusted by startups, growing companies, and established brands"
+  },
+  "whyChoose": {
+    "eyebrow": "Why choose Automivex",
+    "title": "Focused delivery, proven execution, realistic support",
+    "description": "We deliver working software, not vague research. Clear scope, short phases, and measurable outcomes—every time.",
+    "points": [
+      {
+        "title": "Focused delivery",
+        "description": "We scope projects clearly, work in short phases, and hand off working software—not vague research or endless revisions."
+      },
+      {
+        "title": "Proven execution",
+        "description": "18 delivered projects, 42 automated workflows, 98% client satisfaction. We know what works in real production environments."
+      },
+      {
+        "title": "Realistic support",
+        "description": "Response expectations are set upfront. Support paths are documented. Changes are confirmed in writing. No surprises."
+      },
+      {
+        "title": "Clear communication",
+        "description": "Weekly updates, open roadmap conversations, and real progress photos—so you always know what's happening."
+      }
+    ]
+  },
+  "nav": [
+    {
+      "label": "Services",
+      "href": "#services"
+    },
+    {
+      "label": "Work",
+      "href": "#case-studies"
+    },
+    {
+      "label": "Why We Work This Way",
+      "href": "#trust-center"
+    },
+    {
+      "label": "Contact",
+      "href": "#book-call"
+    },
+    {
+      "label": "Get Scoped Plan",
+      "href": "#book-call"
+    }
+  ],
+  "services": [
+    {
+      "key": "quick-wins",
+      "iconKey": "automation",
+      "name": "Quick Fixes & Support",
+      "summary": "Small but important website, Shopify, automation, and product tasks for teams that need fast progress without a large engagement.",
+      "bestFor": "Founders and small teams who need a bug fixed, a form repaired, a store updated, or a workflow cleaned up quickly.",
+      "pain": "Important fixes and small improvements keep getting delayed because they feel too small for a full project.",
+      "outcomes": "A clearly scoped fix, cleaner user experience, and faster momentum without turning a simple job into a heavy build.",
+      "deliverables": [
+        "Bug fixes and UX tidy-ups",
+        "Small integrations or API connections",
+        "Forms, checkout, or deployment fixes",
+        "Short handoff and next-step plan"
+      ],
+      "engagementModel": "Fast-turnaround support sprint",
+      "timeline": "2-10 days",
+      "range": "$300 - $2.5k",
+      "nextStep": "Send the issue, current setup, and deadline. We'll confirm whether it fits a quick support sprint or needs a larger scope.",
+      "basePrice": 300,
+      "availability": "active",
+      "governance": {
+        "owner": "Automivex service delivery",
+        "lastReviewedAt": "2026-04-16T00:00:00Z",
+        "reviewCycle": "Quarterly",
+        "evidenceSummary": "Practical entry point for small projects and urgent fixes."
+      }
+    },
+    {
+      "key": "ai",
+      "iconKey": "ai",
+      "name": "AI Features & Automation",
+      "summary": "Practical AI work such as assistants, recommendations, document processing, forecasting, and internal automation.",
+      "bestFor": "Teams that want a useful AI feature or internal workflow improvement without commissioning a vague research project.",
+      "pain": "Teams want AI results but do not need a large, expensive build before they know what will work.",
+      "outcomes": "Useful AI features that reduce manual work, speed up responses, and fit into real business workflows.",
+      "deliverables": [
+        "Use-case and data review",
+        "Prototype or pilot build",
+        "Workflow or API integration",
+        "Testing, guardrails, and handoff"
+      ],
+      "engagementModel": "Focused build sprint",
+      "timeline": "2-8 weeks",
+      "range": "$2.5k - $25k",
+      "nextStep": "Share the task, data source, and where the AI output should appear. We'll suggest a pilot or delivery sprint.",
+      "basePrice": 2500,
+      "availability": "active",
+      "governance": {
+        "owner": "Automivex service delivery",
+        "lastReviewedAt": "2026-04-16T00:00:00Z",
+        "reviewCycle": "Quarterly",
+        "evidenceSummary": "Good fit for pilots, internal tools, and phased AI rollouts that need early proof of value."
+      }
+    },
+    {
+      "key": "cv",
+      "iconKey": "cv",
+      "name": "Computer Vision & OCR",
+      "summary": "Vision systems for OCR, inspection, detection, image sorting, and document workflows that are too manual today.",
+      "bestFor": "Businesses dealing with invoices, labels, inspections, screenshots, photos, or other image-heavy workflows.",
+      "pain": "Teams still review images, labels, invoices, or media files manually, which slows output and increases mistakes.",
+      "outcomes": "Faster processing, better consistency, and a practical review flow for edge cases.",
+      "deliverables": [
+        "Dataset and edge-case review",
+        "OCR or vision pipeline build",
+        "Human review fallback",
+        "Deployment and monitoring handoff"
+      ],
+      "engagementModel": "Dedicated vision sprint",
+      "timeline": "3-10 weeks",
+      "range": "$3k - $30k",
+      "nextStep": "Show us a few sample files or camera inputs and the decision you need the system to make.",
+      "basePrice": 3000,
+      "availability": "active",
+      "governance": {
+        "owner": "Automivex service delivery",
+        "lastReviewedAt": "2026-04-16T00:00:00Z",
+        "reviewCycle": "Quarterly",
+        "evidenceSummary": "Often starts as a pilot on one document or camera before scaling into larger production systems."
+      }
+    },
+    {
+      "key": "automation",
+      "iconKey": "automation",
+      "name": "Workflow Automation",
+      "summary": "Practical automation for leads, reporting, approvals, admin work, and repetitive tasks that waste team time.",
+      "bestFor": "Operations teams and small businesses losing hours to repetitive admin across email, sheets, forms, CRMs, or approvals.",
+      "pain": "Staff still copy data by hand, chase approvals, and repeat the same tasks across tools.",
+      "outcomes": "Less manual work, faster turnaround, and simpler operations your team can actually maintain.",
+      "deliverables": [
+        "Workflow review and quick wins",
+        "Automation build across your tools",
+        "Alerts and exception handling",
+        "Documentation and handoff"
+      ],
+      "engagementModel": "Focused automation sprint",
+      "timeline": "1-6 weeks",
+      "range": "$600 - $12k",
+      "nextStep": "Tell us which steps are manual today and which tools are involved. We'll identify quick wins and the right rollout size.",
+      "basePrice": 600,
+      "availability": "active",
+      "governance": {
+        "owner": "Automivex service delivery",
+        "lastReviewedAt": "2026-04-16T00:00:00Z",
+        "reviewCycle": "Quarterly",
+        "evidenceSummary": "Strong fit for local businesses and growing teams seeking measurable savings without building a full platform."
+      }
+    },
+    {
+      "key": "shopify",
+      "iconKey": "shopify",
+      "name": "Shopify Storefront & Support",
+      "summary": "Store fixes, conversion improvements, app integrations, and day-to-day Shopify engineering for growing brands.",
+      "bestFor": "Brands that need storefront fixes, conversion improvements, integrations, or ongoing Shopify technical help.",
+      "pain": "Stores lose sales because of theme issues, slow updates, and disconnected operational workflows.",
+      "outcomes": "Cleaner storefront performance, smoother operations, and focused improvements that support sales.",
+      "deliverables": [
+        "Theme or storefront updates",
+        "App and API integrations",
+        "Checkout or ops workflow fixes",
+        "QA, launch, and support handoff"
+      ],
+      "engagementModel": "Flexible Shopify support sprint",
+      "timeline": "3 days - 6 weeks",
+      "range": "$700 - $15k",
+      "nextStep": "Share your store URL, the issue, and the result you want. We'll tell you whether it fits a quick fix or a focused sprint.",
+      "basePrice": 700,
+      "availability": "active",
+      "governance": {
+        "owner": "Automivex service delivery",
+        "lastReviewedAt": "2026-04-16T00:00:00Z",
+        "reviewCycle": "Quarterly",
+        "evidenceSummary": "Can start with a small fix, a conversion sprint, or a larger store improvement plan."
+      }
+    },
+    {
+      "key": "saas",
+      "iconKey": "saas",
+      "name": "SaaS MVP & Product Builds",
+      "summary": "From MVPs and client portals to internal tools and full web products, built with clear phases and realistic scope.",
+      "bestFor": "Founders and teams planning an MVP, client portal, internal tool, or the next phase of an existing product.",
+      "pain": "Teams have product ideas but get stuck between no-code limits, unclear scope, and expensive agency proposals.",
+      "outcomes": "A usable product, cleaner roadmap, and a delivery plan that fits your current stage and budget.",
+      "deliverables": [
+        "Roadmap and architecture planning",
+        "Core feature build",
+        "Admin, auth, and reporting flows",
+        "Launch and handover support"
+      ],
+      "engagementModel": "Product build sprint",
+      "timeline": "2-12 weeks",
+      "range": "$3k - $40k",
+      "nextStep": "Send the product idea, must-have features, and timeline. We'll recommend a discovery sprint, MVP plan, or build phase.",
+      "basePrice": 3000,
+      "availability": "active",
+      "governance": {
+        "owner": "Automivex service delivery",
+        "lastReviewedAt": "2026-04-16T00:00:00Z",
+        "reviewCycle": "Quarterly",
+        "evidenceSummary": "Can begin as a paid discovery sprint, prototype, or lean MVP before expanding into a larger phase."
+      }
+    }
+  ],
+  "caseStudies": [
+    {
+      "slug": "structured-data-extraction-platform",
+      "title": "Structured data extraction for a content research platform",
+      "client": "Aixploria",
+      "sector": "Content operations",
+      "summary": "Aixploria needed structured weekly data without the hours of manual cleanup that were slowing delivery.",
+      "before": "Researchers were spending too much time extracting records, fixing formatting, and reviewing inconsistent outputs.",
+      "after": "We built a structured extraction workflow with validation and scheduled exports, turning a manual weekly task into a repeatable process.",
+      "scope": [
+        "Source review and schema mapping",
+        "Crawler and parser build",
+        "Validation and export workflow"
+      ],
+      "timeline": [
+        "Week 1: review sources and define the output schema",
+        "Week 2: build the crawler, parser, and validation rules",
+        "Week 3: QA the workflow, schedule delivery, and hand over the process"
+      ],
+      "metrics": [
+        {
+          "label": "Structured accuracy",
+          "value": "97%"
+        },
+        {
+          "label": "Manual time saved",
+          "value": "18 hrs/week"
+        }
+      ],
+      "architecture": [
+        "Source Review",
+        "Crawler",
+        "Parser",
+        "Validation"
+      ],
+      "evidence": [
+        "Delivery focused on one repeatable weekly workflow instead of a broad platform rebuild.",
+        "Validation rules added trust before export.",
+        "Handoff made the workflow usable without daily engineering support."
+      ],
+      "governance": {
+        "owner": "Automivex case study content",
+        "lastReviewedAt": "2026-04-16T00:00:00Z",
+        "reviewCycle": "Quarterly",
+        "evidenceSummary": "Reflects a scoped delivery with documented workflow change and measurable weekly time savings."
+      }
+    },
+    {
+      "slug": "election-intelligence-modeling-engine",
+      "title": "Forecasting workflow for a research team",
+      "client": "Research portfolio",
+      "sector": "Research and forecasting",
+      "summary": "A research team needed a better way to test scenarios and produce outputs without relying on fragmented manual analysis.",
+      "before": "Historical data, model testing, and reporting were split across disconnected files and ad hoc processes.",
+      "after": "We built a forecasting workflow with cleaner data prep, model evaluation, and dashboard outputs for faster scenario testing.",
+      "scope": [
+        "Historical data engineering",
+        "Baseline and optimized model design",
+        "Dashboard and reporting outputs"
+      ],
+      "timeline": [
+        "Week 1: clean data sources and define the forecasting pipeline",
+        "Week 2: build baseline models and evaluation steps",
+        "Week 3: optimize outputs and package the reporting workflow"
+      ],
+      "metrics": [
+        {
+          "label": "Forecast accuracy lift",
+          "value": "+24%"
+        },
+        {
+          "label": "Analyst time saved",
+          "value": "10 hrs/report"
+        }
+      ],
+      "architecture": [
+        "Data Prep",
+        "Feature Store",
+        "Model Training",
+        "Insights Dashboard"
+      ],
+      "evidence": [
+        "Work centered on a measurable decision workflow rather than a one-off model experiment.",
+        "Scenario testing and reporting brought into one cleaner delivery path.",
+        "Reporting layer reduced time from raw inputs to decision-ready outputs."
+      ],
+      "governance": {
+        "owner": "Automivex case study content",
+        "lastReviewedAt": "2026-04-16T00:00:00Z",
+        "reviewCycle": "Quarterly",
+        "evidenceSummary": "Captures a practical forecasting workflow with documented model improvements and reporting time savings."
+      }
+    }
+  ],
+  "trustItems": [
+    {
+      "id": "security",
+      "iconKey": "security",
+      "title": "Security & access",
+      "summary": "Projects are built with secure defaults, limited access, and review before release.",
+      "commitments": [
+        "Secrets stay out of source control and shared documents.",
+        "Production access is limited to the people who need it.",
+        "Sensitive changes are reviewed before release."
+      ],
+      "evidence": [
+        "The backend uses Helmet, CORS, rate limiting, request IDs, and input validation.",
+        "Security contact is published under /.well-known/security.txt.",
+        "Access expectations are documented during delivery."
+      ],
+      "governance": {
+        "owner": "Automivex trust content",
+        "lastReviewedAt": "2026-04-16T00:00:00Z",
+        "reviewCycle": "Quarterly",
+        "evidenceSummary": "Security statements stay tied to real controls and are reviewed against current delivery setup before publication."
+      }
+    },
+    {
+      "id": "sdlc",
+      "iconKey": "sdlc",
+      "title": "Delivery process",
+      "summary": "You get a clear path from discovery to handoff, with scope, milestones, and visible progress.",
+      "commitments": [
+        "We align on scope before build work starts.",
+        "Implementation is broken into clear delivery phases.",
+        "QA, release, and handoff are part of the plan, not an afterthought."
+      ],
+      "evidence": [
+        "Public service entries describe scope, deliverables, and timelines.",
+        "Case studies show the before, approach, and outcome instead of vague claims.",
+        "Website content is served from a structured backend source."
+      ],
+      "governance": {
+        "owner": "Automivex trust content",
+        "lastReviewedAt": "2026-04-16T00:00:00Z",
+        "reviewCycle": "Quarterly",
+        "evidenceSummary": "Process language is reviewed against the actual delivery model so the site matches how projects are run."
+      }
+    },
+    {
+      "id": "data",
+      "iconKey": "data",
+      "title": "Data handling",
+      "summary": "Project data, credentials, and lead information are handled with clear boundaries and secure transport.",
+      "commitments": [
+        "Transport uses secure channels.",
+        "Lead submissions are validated before persistence.",
+        "Policy-sensitive statements stay aligned with public legal pages."
+      ],
+      "evidence": [
+        "Lead intake is validated through shared schemas before persistence.",
+        "Privacy and cookie policy pages are published with contact routes.",
+        "Request metadata capture is explicit in the backend lead flow."
+      ],
+      "governance": {
+        "owner": "Automivex trust content",
+        "lastReviewedAt": "2026-04-16T00:00:00Z",
+        "reviewCycle": "Quarterly",
+        "evidenceSummary": "Data-handling statements remain aligned with the live intake flow, storage configuration, and public policy pages."
+      }
+    },
+    {
+      "id": "support",
+      "iconKey": "support",
+      "title": "Communication & support",
+      "summary": "Clients should know what is in progress, what is blocked, and what happens next.",
+      "commitments": [
+        "Response expectations are set early and stated conservatively.",
+        "Support and change requests are confirmed in writing.",
+        "Pre-sales and policy contact paths remain public and monitored."
+      ],
+      "evidence": [
+        "The website publishes contact paths, booking flow, and reply guidance.",
+        "Terms avoid implying guaranteed acceptance without a written agreement.",
+        "Support statements are reviewed from the published content record."
+      ],
+      "governance": {
+        "owner": "Automivex trust content",
+        "lastReviewedAt": "2026-04-16T00:00:00Z",
+        "reviewCycle": "Quarterly",
+        "evidenceSummary": "Communication and support statements are reviewed against current staffing, public contact routes, and written agreements."
+      }
+    }
+  ],
+  "proofSnapshot": {
+    "projectsDelivered": 18,
+    "workflowsAutomated": 42,
+    "clientSatisfaction": 98,
+    "averageResponseHours": 24,
+    "publishedAt": "2026-04-16T00:00:00Z",
+    "sourceLabel": "Internally verified delivery snapshot"
+  },
+  "qualificationQuestions": [
+    "What do you need help building or improving?",
+    "What business problem should this solve?",
+    "Who will use it and how often?",
+    "Which tools, platforms, or systems need to connect?"
+  ],
+  "projectTypeOptions": [
+    "Quick Fixes & Support",
+    "AI Features & Automation",
+    "Computer Vision & OCR",
+    "Workflow Automation",
+    "Shopify Storefront & Support"
+  ],
+  "budgetOptions": [
+    "$300 - $1k",
+    "$1k - $5k",
+    "$5k - $15k",
+    "$15k+"
+  ],
+  "siteConfig": {
+    "brand": "Automivex",
+    "websiteUrl": "https://automivex.com",
+    "title": "Automivex | AI, Automation, SaaS & Shopify Engineering",
+    "description": "Automivex helps founders, operators, and growing teams ship AI features, workflow automation, SaaS products, Shopify improvements, and urgent software fixes.",
+    "ogImage": "/og-image.svg",
+    "contact": {
+      "primaryEmail": "hello@automivex.com",
+      "legalEmail": "legal@automivex.com",
+      "responseWindow": "Usually within 1 business day"
+    },
+    "socialLinks": [
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/company/automivex/"
+      }
+    ]
+  },
+  "legalLinks": [
+    {
+      "label": "Privacy Policy",
+      "href": "/privacy"
+    },
+    {
+      "label": "Terms & Conditions",
+      "href": "/terms"
+    }
+  ],
+  "socialLinks": [
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/company/automivex/"
+    }
+  ],
+  "organizationStructuredData": {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Automivex",
+    "url": "https://automivex.com",
+    "logo": "https://automivex.com/favicon.svg",
+    "email": "hello@automivex.com",
+    "sameAs": [
+      "https://www.linkedin.com/company/automivex/"
+    ],
+    "description": "Software company delivering AI features, automation, SaaS products, Shopify engineering, and scoped implementation support.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "email": "hello@automivex.com",
+      "url": "https://automivex.com/#book-call"
+    }
+  }
+}

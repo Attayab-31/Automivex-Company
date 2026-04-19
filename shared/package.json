@@ -1,0 +1,13 @@
+{
+  "name": "@automivex/shared",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+    ".": "./schemas.js",
+    "./schemas": "./schemas.js"
+  },
+  "dependencies": {
+    "zod": "^4.3.6"
+  }
+}

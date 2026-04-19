@@ -1,0 +1,32 @@
+{
+  "name": "@automivex/backend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js",
+    "check": "node --check server.js && node --check src/server.js && node --check src/app.js && node --check src/config/env.js && node --check src/routes/index.js && node --check src/middleware/error-handler.js && node --check src/middleware/not-found.js && node --check src/middleware/request-id.js && node --check src/middleware/security.js && node --check src/middleware/validate-body.js && node --check src/lib/mongo.js && node --check src/lib/site-content-pack.js && node --check src/repositories/lead.repository.js && node --check src/repositories/site-content.repository.js && node --check src/services/lead-email-notification.service.js && node --check src/services/lead.service.js && node --check src/services/proof.service.js && node --check src/services/qualification.service.js && node --check src/services/site-content.service.js && node --check scripts/publish-site-content.js",
+    "test": "node --test",
+    "publish:site-content": "node scripts/publish-site-content.js",
+    "setup:admin": "node scripts/setup-initial-admin.js"
+  },
+  "dependencies": {
+    "@automivex/shared": "file:../shared",
+    "bcryptjs": "^3.0.3",
+    "compression": "^1.8.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.3.2",
+    "helmet": "^8.1.0",
+    "hpp": "^0.2.3",
+    "jsonwebtoken": "^9.0.3",
+    "mongodb": "^6.16.0",
+    "pino": "^10.3.1",
+    "pino-pretty": "^13.1.3",
+    "redis": "^5.12.1",
+    "zod": "^4.3.6"
+  }
+}

@@ -1,7 +1,8 @@
-import { frontendEnv } from "@/lib/env";
 import { ApiError, buildApiError } from "@/shared/api/ApiError.js";
 
-const API_BASE = `${frontendEnv.backendUrl}/api/admin`;
+// Use relative paths so Vercel rewrites handle the routing
+// This makes it same-origin from browser's perspective, allowing cookies with SameSite=Strict
+const API_BASE = "/api/admin";
 
 class AdminApiClient {
   constructor() {

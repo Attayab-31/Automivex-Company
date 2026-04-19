@@ -111,11 +111,11 @@ export function applySecurity(app) {
 
         return callback(buildCorsError());
       },
-      methods: ["GET", "POST", "OPTIONS"],
+      methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
       allowedHeaders: ["Content-Type", "Authorization", "X-CSRF-Token"],
       credentials: true, // ✅ Allow cookies to be sent/received in cross-origin requests
       maxAge: 60 * 60 * 24,
-      optionsSuccessStatus: 204,
+      optionsSuccessStatus: 200,
     })
   );
 }

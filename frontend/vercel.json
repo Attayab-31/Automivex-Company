@@ -1,8 +1,9 @@
 {
+  "buildCommand": "npm run build",
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "${VITE_BACKEND_URL}/api/$1"
+      "destination": "https://automivex-company.onrender.com/api/$1"
     },
     {
       "source": "/(.*)",

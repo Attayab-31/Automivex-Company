@@ -137,16 +137,42 @@ h4 {
 
 .brand {
   display: inline-flex;
-  gap: 9px;
+  gap: 10px;
   align-items: center;
   font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
 }
 
+.brand:hover {
+  opacity: 0.85;
+}
+
+.brand-text {
+  font-family: "Sora", sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: -0.5px;
+  color: var(--text);
+}
+
+/* Logo icon styling */
+.logo-icon {
+  flex-shrink: 0;
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+
+.logo-full {
+  flex-shrink: 0;
+  display: block;
+  height: auto;
+}
+
+/* Hide old dot element */
 .dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  background: linear-gradient(120deg, var(--primary), var(--secondary));
+  display: none !important;
 }
 
 .site-nav {
@@ -1169,6 +1195,15 @@ textarea:disabled {
 
   .theme-toggle span {
     display: none;
+  }
+
+  /* Mobile logo styling */
+  .brand {
+    gap: 8px;
+  }
+
+  .brand-text {
+    font-size: 1rem;
   }
 
   .cookie-banner {

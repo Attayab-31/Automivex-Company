@@ -2,6 +2,7 @@ import { memo, useCallback, useEffect, useMemo } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { useSiteContentQuery } from "@/hooks/useSiteContentQuery";
 import { useUiStore } from "@/shared/stores/uiStore";
+import { LogoIcon } from "@/components/Logo";
 
 export const Header = memo(function Header({ theme, onToggleTheme }) {
   const { data: response } = useSiteContentQuery();
@@ -52,8 +53,10 @@ export const Header = memo(function Header({ theme, onToggleTheme }) {
       <header className="header">
         <div className="container header-inner">
           <a href="#top" className="brand" onClick={closeMobileMenu}>
-            <span className="dot" />
-            {siteConfig?.brand || "Automivex"}
+            <LogoIcon size={32} />
+            <span className="brand-text">
+              {siteConfig?.brand || "Automivex"}
+            </span>
           </a>
 
           <nav className="site-nav" aria-label="Primary">

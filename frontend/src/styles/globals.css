@@ -125,6 +125,7 @@ button:disabled {
   align-items: center;
   justify-content: space-between;
   gap: 14px;
+  padding: 0 12px;
 }
 
 .brand,
@@ -142,7 +143,19 @@ h4 {
   font-weight: 700;
   text-decoration: none;
   cursor: pointer;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease, gap 0.2s ease;
+}
+
+@media (max-width: 479px) {
+  .brand {
+    gap: 6px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  .brand {
+    gap: 8px;
+  }
 }
 
 .brand:hover {
@@ -154,6 +167,19 @@ h4 {
   font-size: 1.1rem;
   letter-spacing: -0.5px;
   color: var(--text);
+  transition: font-size 0.2s ease;
+}
+
+@media (max-width: 479px) {
+  .brand-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  .brand-text {
+    font-size: 0.95rem;
+  }
 }
 
 /* Logo image styling */
@@ -174,28 +200,39 @@ h4 {
 }
 
 /* Responsive logo sizing */
-/* Extra small screens (< 480px) */
+/* Extra small screens (< 480px) - MOBILE PHONES */
 @media (max-width: 479px) {
+  .header-inner {
+    height: 64px;
+    gap: 8px;
+    padding: 0 10px;
+  }
+
   .brand-logo-only .logo-image {
-    height: 35px;
+    height: 28px;
   }
 }
 
-/* Small screens (480px - 768px) */
+/* Small screens (480px - 768px) - LARGE PHONES & SMALL TABLETS */
 @media (min-width: 480px) and (max-width: 768px) {
+  .header-inner {
+    height: 68px;
+    gap: 10px;
+  }
+
   .brand-logo-only .logo-image {
-    height: 45px;
+    height: 38px;
   }
 }
 
-/* Medium screens (768px - 1024px) */
+/* Medium screens (768px - 1024px) - TABLETS */
 @media (min-width: 768px) and (max-width: 1024px) {
   .brand-logo-only .logo-image {
     height: 52px;
   }
 }
 
-/* Large screens (> 1024px) */
+/* Large screens (> 1024px) - DESKTOPS */
 @media (min-width: 1024px) {
   .brand-logo-only .logo-image {
     height: 60px;
@@ -251,6 +288,24 @@ h4 {
   color: var(--text);
   padding: 10px 14px;
   cursor: pointer;
+  transition: padding 0.2s ease;
+}
+
+@media (max-width: 479px) {
+  .nav-toggle {
+    padding: 8px 10px;
+    gap: 3px;
+  }
+
+  .nav-toggle-label {
+    display: none;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  .nav-toggle {
+    padding: 8px 12px;
+  }
 }
 
 .nav-toggle > span:not(.nav-toggle-label) {
@@ -357,6 +412,20 @@ h4 {
   font-weight: 700;
   padding: 10px 14px;
   cursor: pointer;
+  transition: padding 0.2s ease;
+}
+
+@media (max-width: 479px) {
+  .theme-toggle {
+    padding: 8px 10px;
+    gap: 6px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  .theme-toggle {
+    padding: 8px 12px;
+  }
 }
 
 .btn {

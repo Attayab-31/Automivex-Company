@@ -161,7 +161,7 @@ h4 {
   height: 50px;
   width: auto;
   display: block;
-  transition: filter 0.3s ease;
+  transition: filter 0.3s ease, height 0.2s ease;
 }
 
 /* Logo only (no text) styling */
@@ -171,6 +171,35 @@ h4 {
 
 .brand-logo-only .logo-image {
   height: 60px;
+}
+
+/* Responsive logo sizing */
+/* Extra small screens (< 480px) */
+@media (max-width: 479px) {
+  .brand-logo-only .logo-image {
+    height: 35px;
+  }
+}
+
+/* Small screens (480px - 768px) */
+@media (min-width: 480px) and (max-width: 768px) {
+  .brand-logo-only .logo-image {
+    height: 45px;
+  }
+}
+
+/* Medium screens (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .brand-logo-only .logo-image {
+    height: 52px;
+  }
+}
+
+/* Large screens (> 1024px) */
+@media (min-width: 1024px) {
+  .brand-logo-only .logo-image {
+    height: 60px;
+  }
 }
 
 /* Dark mode: invert black logo to white for dark background */
@@ -1214,17 +1243,13 @@ textarea:disabled {
     display: none;
   }
 
-  /* Mobile logo styling */
+  /* Mobile layout adjustments */
   .brand {
     gap: 8px;
   }
 
   .brand-text {
     font-size: 1rem;
-  }
-
-  .logo-image {
-    height: 45px;
   }
 
   .cookie-banner {

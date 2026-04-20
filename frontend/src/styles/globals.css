@@ -173,14 +173,14 @@ h4 {
   height: 60px;
 }
 
-/* Dark mode: black logo visible on dark background */
+/* Dark mode: invert black logo to white for dark background */
 :root .logo-image {
-  filter: brightness(1.2) saturate(0.8);
+  filter: brightness(0) invert(1) saturate(1.2);
 }
 
-/* Light mode: darken black logo for light background */
+/* Light mode: keep logo black with normal brightness */
 :root[data-theme="light"] .logo-image {
-  filter: brightness(0.9) saturate(1);
+  filter: brightness(1) saturate(1) invert(0);
 }
 
 /* Hide old dot element */

@@ -156,23 +156,40 @@ h4 {
   color: var(--text);
 }
 
-/* Logo icon styling */
-.logo-icon {
-  flex-shrink: 0;
+/* Logo image styling */
+.logo-image {
+  height: 50px;
+  width: auto;
   display: block;
-  width: 32px;
-  height: 32px;
+  transition: filter 0.3s ease;
 }
 
-.logo-full {
-  flex-shrink: 0;
-  display: block;
-  height: auto;
+/* Logo only (no text) styling */
+.brand-logo-only {
+  padding: 0;
+}
+
+.brand-logo-only .logo-image {
+  height: 60px;
+}
+
+/* Dark mode: black logo visible on dark background */
+:root .logo-image {
+  filter: brightness(1.2) saturate(0.8);
+}
+
+/* Light mode: darken black logo for light background */
+:root[data-theme="light"] .logo-image {
+  filter: brightness(0.9) saturate(1);
 }
 
 /* Hide old dot element */
 .dot {
   display: none !important;
+}
+
+.logo-icon {
+  display: none;
 }
 
 .site-nav {
@@ -1204,6 +1221,10 @@ textarea:disabled {
 
   .brand-text {
     font-size: 1rem;
+  }
+
+  .logo-image {
+    height: 45px;
   }
 
   .cookie-banner {

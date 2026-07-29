@@ -1,5 +1,18 @@
 {
   "buildCommand": "npm run build",
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "automivex.com"
+        }
+      ],
+      "destination": "https://www.automivex.com/$1",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/api/(.*)",

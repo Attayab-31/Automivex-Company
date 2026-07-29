@@ -59,6 +59,7 @@ export default function ServiceLandingPage() {
       title: metadata.title,
       description: metadata.description,
       pathname: `/services/${serviceKey}`,
+      keywords: metadata.keywords,
     };
   }, [serviceKey]);
 
@@ -82,6 +83,7 @@ export default function ServiceLandingPage() {
         description={seoData.description}
         pathname={seoData.pathname}
         siteConfig={publishedContent?.siteConfig}
+        keywords={seoData.keywords}
       />
       <main id="main-content">
         <Section>

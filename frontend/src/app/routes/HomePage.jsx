@@ -77,6 +77,7 @@ export default function HomePage() {
           pathname="/"
           structuredData={seoData.structuredData}
           siteConfig={publishedContent.siteConfig}
+          keywords="AI development, automation engineering, SaaS development, Shopify development, computer vision, software company"
         />
       )}
 

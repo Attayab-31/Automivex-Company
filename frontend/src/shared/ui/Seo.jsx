@@ -1,9 +1,23 @@
 import { useEffect } from "react";
 
+function normalizePathname(pathname) {
+  if (!pathname || pathname === "/") return "/";
+
+  const withoutHash = pathname.split("#")[0].split("?")[0];
+  const normalized = withoutHash.startsWith("/") ? withoutHash : `/${withoutHash}`;
+
+  return normalized.replace(/\/+$/, "") || "/";
+}
+
 function resolveCanonical(pathname, websiteUrl) {
-  return pathname.startsWith("http")
-    ? pathname
-    : `${websiteUrl}${pathname}`;
+  if (pathname.startsWith("http")) {
+    return pathname;
+  }
+
+  const base = websiteUrl.replace(/\/+$/, "");
+  const normalizedPathname = normalizePathname(pathname);
+
+  return normalizedPathname === "/" ? `${base}/` : `${base}${normalizedPathname}`;
 }
 
 function resolveImage(image, websiteUrl) {
@@ -50,11 +64,19 @@ export function Seo({
   noIndex = false,
   structuredData,
   siteConfig = {},
+  keywords = "",
 }) {
-  const websiteUrl = siteConfig.websiteUrl || "https://automivex.com";
+  const websiteUrl =
+    siteConfig.websiteUrl ||
+    (typeof window !== "undefined"
+      ? window.location.origin
+      : "https://www.automivex.com");
   const brand = siteConfig.brand || "Automivex";
-  const ogImage = image || siteConfig.ogImage || `${websiteUrl}/og-image.png`;
-  
+  const defaultKeywords =
+    "AI development, automation engineering, SaaS development, Shopify development, computer vision, software company";
+  const ogImage = image || siteConfig.ogImage || `${websiteUrl}/og-image.svg`;
+  const resolvedKeywords = keywords || siteConfig.keywords || defaultKeywords;
+
   const canonical = resolveCanonical(pathname, websiteUrl);
   const resolvedImage = resolveImage(ogImage, websiteUrl);
   const resolvedOgTitle = ogTitle || title;
@@ -70,9 +92,15 @@ export function Seo({
       name: "description",
       content: description,
     });
+    upsertMeta('meta[name="keywords"]', {
+      name: "keywords",
+      content: resolvedKeywords,
+    });
     upsertMeta('meta[name="robots"]', {
       name: "robots",
-      content: noIndex ? "noindex,nofollow" : "index,follow",
+      content: noIndex
+        ? "noindex,nofollow"
+        : "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1",
     });
 
     upsertMeta('meta[property="og:title"]', {
@@ -94,6 +122,10 @@ export function Seo({
     upsertMeta('meta[property="og:site_name"]', {
       property: "og:site_name",
       content: brand,
+    });
+    upsertMeta('meta[property="og:locale"]', {
+      property: "og:locale",
+      content: "en_US",
     });
     upsertMeta('meta[property="og:image"]', {
       property: "og:image",
@@ -143,10 +175,12 @@ export function Seo({
       structuredDataNode.remove();
     }
   }, [
+    brand,
     canonical,
     description,
     noIndex,
     resolvedImage,
+    resolvedKeywords,
     resolvedOgDescription,
     resolvedOgTitle,
     resolvedTwitterDescription,

@@ -1,52 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://automivex.com/</loc>
+    <loc>https://www.automivex.com/</loc>
+    <lastmod>2026-07-30</lastmod>
     <priority>1.0</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://automivex.com/services/quick-wins</loc>
+    <loc>https://www.automivex.com/services/quick-wins</loc>
+    <lastmod>2026-07-30</lastmod>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://automivex.com/services/ai</loc>
+    <loc>https://www.automivex.com/services/ai</loc>
+    <lastmod>2026-07-30</lastmod>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://automivex.com/services/cv</loc>
+    <loc>https://www.automivex.com/services/cv</loc>
+    <lastmod>2026-07-30</lastmod>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://automivex.com/services/automation</loc>
+    <loc>https://www.automivex.com/services/automation</loc>
+    <lastmod>2026-07-30</lastmod>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://automivex.com/services/shopify</loc>
+    <loc>https://www.automivex.com/services/shopify</loc>
+    <lastmod>2026-07-30</lastmod>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://automivex.com/services/saas</loc>
+    <loc>https://www.automivex.com/services/saas</loc>
+    <lastmod>2026-07-30</lastmod>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://automivex.com/privacy/</loc>
+    <loc>https://www.automivex.com/privacy</loc>
+    <lastmod>2026-07-30</lastmod>
     <priority>0.5</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>https://automivex.com/terms/</loc>
+    <loc>https://www.automivex.com/terms</loc>
+    <lastmod>2026-07-30</lastmod>
     <priority>0.5</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>https://automivex.com/cookies/</loc>
+    <loc>https://www.automivex.com/cookies</loc>
+    <lastmod>2026-07-30</lastmod>
     <priority>0.5</priority>
     <changefreq>yearly</changefreq>
   </url>

@@ -11,10 +11,10 @@ export default function NotFoundPage() {
         noIndex
       />
 
-      <main className="route-loader" id="main-content">
+      <main className="route-loader" id="main-content" aria-labelledby="not-found-title">
         <div className="container app-shell-error-card">
           <p className="eyebrow">404</p>
-          <h1>The page you requested was not found.</h1>
+          <h1 id="not-found-title">The page you requested was not found.</h1>
           <p className="muted-note">
             The link may be outdated, or the page may have moved during a site update.
           </p>

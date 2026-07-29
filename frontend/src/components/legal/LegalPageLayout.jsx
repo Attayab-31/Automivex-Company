@@ -13,7 +13,7 @@ export function LegalPageLayout({
   siteConfig = {},
 }) {
   return (
-    <main className="legal-main" id="main-content">
+    <main className="legal-main" id="main-content" aria-labelledby="legal-page-title">
       <div className="policy-shell">
         <header className="policy-topbar">
           <Link className="policy-brand" to="/">

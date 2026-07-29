@@ -12,9 +12,10 @@ export const Footer = memo(function Footer({ year }) {
   }
 
   return (
-    <footer className="footer">
+    <footer className="footer" aria-labelledby="site-footer-title">
       <div className="container footer-inner">
         <div className="footer-brand">
+          <h2 id="site-footer-title" className="footer-title">{siteConfig.brand}</h2>
           <p>{`Copyright ${year} ${siteConfig.brand}. All rights reserved.`}</p>
           <p>AI, automation, SaaS, Shopify, and practical software delivery.</p>
           <a href={siteConfig.websiteUrl} target="_blank" rel="noopener noreferrer">

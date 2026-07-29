@@ -85,11 +85,11 @@ export default function ServiceLandingPage() {
         siteConfig={publishedContent?.siteConfig}
         keywords={seoData.keywords}
       />
-      <main id="main-content">
+      <main id="main-content" aria-labelledby="service-page-title">
         <Section>
           <div className="service-hero">
             <p className="eyebrow">{service.name}</p>
-            <h1>{service.name}</h1>
+            <h1 id="service-page-title">{service.name}</h1>
             <p className="lead-text">{service.summary}</p>
           </div>
 

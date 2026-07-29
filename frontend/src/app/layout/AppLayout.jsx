@@ -21,7 +21,7 @@ export function AppLayout() {
   useLenis({ enabled: !prefersReducedMotion });
 
   return (
-    <div className="page-shell">
+    <div className="page-shell" aria-live="polite">
       <AnalyticsProvider />
 
       <a className="skip-link" href="#main-content">

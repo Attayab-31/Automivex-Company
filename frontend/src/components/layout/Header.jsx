@@ -7,7 +7,7 @@ export const Header = memo(function Header({ theme, onToggleTheme }) {
   const { data: response } = useSiteContentQuery();
   const siteConfig = useMemo(() => response?.status === "published" ? response.content?.siteConfig : null, [response]);
   const navItems = useMemo(() => response?.status === "published" ? response.content?.nav || [] : [], [response]);
-  
+
   const menuOpen = useUiStore((state) => state.mobileMenuOpen);
   const setMobileMenuOpen = useUiStore((state) => state.setMobileMenuOpen);
   const closeMobileMenu = useUiStore((state) => state.closeMobileMenu);
@@ -52,7 +52,15 @@ export const Header = memo(function Header({ theme, onToggleTheme }) {
       <header className="header">
         <div className="container header-inner">
           <a href="#top" className="brand brand-logo-only" onClick={closeMobileMenu}>
-            <img src="/logo.svg" alt="Automivex - The Intelligent Solutions" className="logo-image" />
+            <img
+              src="/logo.svg"
+              alt="Automivex - The Intelligent Solutions"
+              className="logo-image"
+              width="160"
+              height="60"
+              decoding="async"
+              loading="eager"
+            />
           </a>
 
           <nav className="site-nav" aria-label="Primary">

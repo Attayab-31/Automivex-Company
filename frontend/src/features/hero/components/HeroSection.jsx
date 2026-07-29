@@ -1,24 +1,11 @@
-import { motion } from "framer-motion";
 import { HeroScene } from "@/features/hero/components/HeroScene";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 import { trackEvent } from "@/lib/analytics";
 
 export default function HeroSection({ heroContent }) {
   const prefersReducedMotion = usePrefersReducedMotion();
-  const contentAnimation = prefersReducedMotion
-    ? {}
-    : {
-      initial: { opacity: 0, y: 24 },
-      animate: { opacity: 1, y: 0 },
-      transition: { duration: 0.65 },
-    };
-  const visualAnimation = prefersReducedMotion
-    ? {}
-    : {
-      initial: { opacity: 0, scale: 0.97 },
-      animate: { opacity: 1, scale: 1 },
-      transition: { duration: 0.75, delay: 0.05 },
-    };
+  const contentClassName = prefersReducedMotion ? "hero-left" : "hero-left hero-left-animate";
+  const visualClassName = prefersReducedMotion ? "hero-right" : "hero-right hero-right-animate";
 
   // Fallback values if content is not yet loaded
   const content = heroContent || {
@@ -32,7 +19,7 @@ export default function HeroSection({ heroContent }) {
 
   return (
     <section id="top" className="hero container" aria-labelledby="hero-title">
-      <motion.div {...contentAnimation} className="hero-left">
+      <div className={contentClassName}>
         <p className="eyebrow">{content.eyebrow}</p>
         <h1 id="hero-title">{content.title}</h1>
         <p>{content.description}</p>
@@ -55,11 +42,11 @@ export default function HeroSection({ heroContent }) {
         </div>
 
         <p className="muted-note">{content.trustLine}</p>
-      </motion.div>
+      </div>
 
-      <motion.div {...visualAnimation} className="hero-right">
+      <div className={visualClassName}>
         <HeroScene reducedMotion={prefersReducedMotion} />
-      </motion.div>
+      </div>
     </section>
   );
 }

@@ -491,6 +491,38 @@ h4 {
   line-height: 1.7;
 }
 
+.hero-left-animate {
+  animation: hero-content-enter 0.65s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.hero-right-animate {
+  animation: hero-visual-enter 0.75s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+@keyframes hero-content-enter {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-visual-enter {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .hero-actions {
   display: flex;
   gap: 12px;
@@ -643,6 +675,24 @@ h4 {
 .hero-scene-reduced .hero-orb,
 .hero-scene-reduced .hero-visual-shell {
   animation: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero-left-animate,
+  .hero-right-animate,
+  .hero-orb,
+  .hero-visual-shell,
+  .hero-scene-reduced .hero-orb,
+  .hero-scene-reduced .hero-visual-shell {
+    animation: none !important;
+  }
+
+  .hero-left-animate,
+  .hero-right-animate {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .section {

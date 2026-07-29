@@ -45,7 +45,7 @@ export default function ServicesPage() {
         keywords="AI development, automation engineering, SaaS development, Shopify development, computer vision, workflow automation"
       />
 
-      <main id="main-content">
+      <main id="main-content" aria-labelledby="services-page-title">
         <Section eyebrow="Services" title="Software delivery for fast-moving teams" ariaLabel="services-page-title">
           <div className="service-hero">
             <h1 id="services-page-title">Software delivery for fast-moving teams</h1>

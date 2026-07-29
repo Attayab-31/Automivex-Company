@@ -39,18 +39,18 @@ export default function ServicesPage() {
   return (
     <>
       <Seo
-        title="Services | Automivex"
-        description="Explore Automivex services for AI development, automation, SaaS products, Shopify engineering, and computer vision."
+        title="Software Services for AI, Automation, SaaS & Shopify | Automivex"
+        description="Explore Automivex services for AI development, workflow automation, SaaS product development, Shopify development, and computer vision solutions."
         pathname="/services"
-        keywords="AI development, automation engineering, SaaS development, Shopify development, computer vision, workflow automation"
+        keywords="AI development services, workflow automation services, SaaS product development, Shopify development services, computer vision services"
       />
 
       <main id="main-content" aria-labelledby="services-page-title">
-        <Section eyebrow="Services" title="Software delivery for fast-moving teams" ariaLabel="services-page-title">
+        <Section eyebrow="Services" title="Software services for fast-moving teams" ariaLabel="services-page-title">
           <div className="service-hero">
-            <h1 id="services-page-title">Software delivery for fast-moving teams</h1>
+            <h1 id="services-page-title">Software services for fast-moving teams</h1>
             <p className="lead-text">
-              We help founders and operators ship practical software without bloated agency overhead.
+              We help founders and operators ship practical software for AI development, workflow automation, Shopify growth, SaaS products, and computer vision.
             </p>
           </div>
 

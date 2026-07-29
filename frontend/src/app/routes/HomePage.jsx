@@ -3,8 +3,8 @@ import { AsyncSectionFallback } from "@/components/feedback/AsyncSectionFallback
 import HeroSection from "@/features/hero/components/HeroSection";
 import { useSiteContentQuery } from "@/hooks/useSiteContentQuery";
 import { Seo } from "@/shared/ui/Seo";
-import { RouteErrorState } from "@/components/feedback/RouteErrorState";
 import { PageLoader } from "@/components/feedback/PageLoader";
+import { fallbackHomeContent } from "@/app/routes/homePageContent";
 
 const ProofSection = lazy(() => import("@/features/proof/components/ProofSection"));
 const WhyChooseSection = lazy(() =>
@@ -28,44 +28,26 @@ const ContactSection = lazy(() => import("@/features/contact/components/ContactS
 export default function HomePage() {
   const siteContentQuery = useSiteContentQuery();
 
-  // Extract published content - no fallback
   const publishedContent =
     siteContentQuery.data?.status === "published" ? siteContentQuery.data.content : null;
 
+  const content = useMemo(() => {
+    return publishedContent || fallbackHomeContent;
+  }, [publishedContent]);
+
   const seoData = useMemo(() => {
-    if (!publishedContent?.siteConfig || !publishedContent?.organizationStructuredData) {
+    if (!content?.siteConfig || !content?.organizationStructuredData) {
       return null;
     }
     return {
-      title: publishedContent.siteConfig.title,
-      description: publishedContent.siteConfig.description,
-      structuredData: publishedContent.organizationStructuredData,
+      title: content.siteConfig.title,
+      description: content.siteConfig.description,
+      structuredData: content.organizationStructuredData,
     };
-  }, [publishedContent]);
+  }, [content]);
 
-  // Show loading state while fetching
   if (siteContentQuery.isPending) {
     return <PageLoader />;
-  }
-
-  // Show error state if request failed
-  if (siteContentQuery.isError) {
-    return (
-      <RouteErrorState
-        title="Content unavailable"
-        message="The website content is currently unavailable. Please try again in a few moments."
-      />
-    );
-  }
-
-  // Show error state if no published content available
-  if (!publishedContent || siteContentQuery.data?.status !== "published") {
-    return (
-      <RouteErrorState
-        title="No content available"
-        message="The website content has not been configured. Please contact the administrator."
-      />
-    );
   }
 
   return (
@@ -82,7 +64,7 @@ export default function HomePage() {
       )}
 
       <main id="main-content">
-        <HeroSection heroContent={publishedContent.hero} />
+        <HeroSection heroContent={content.hero} />
 
         <Suspense
           fallback={
@@ -92,7 +74,7 @@ export default function HomePage() {
             />
           }
         >
-          <WhyChooseSection whyChooseContent={publishedContent.whyChoose} />
+          <WhyChooseSection whyChooseContent={content.whyChoose} />
         </Suspense>
 
         <Suspense
@@ -104,7 +86,7 @@ export default function HomePage() {
           }
         >
           <ProofSection
-            proofSnapshot={publishedContent.proofSnapshot}
+            proofSnapshot={content.proofSnapshot}
             isLoading={false}
             error={null}
           />
@@ -119,10 +101,10 @@ export default function HomePage() {
           }
         >
           <ServicesSection
-            services={publishedContent.services}
+            services={content.services}
             contentMeta={{
-              publishedAt: publishedContent.publishedAt,
-              sourceLabel: publishedContent.sourceLabel,
+              publishedAt: content.publishedAt,
+              sourceLabel: content.sourceLabel,
             }}
           />
         </Suspense>
@@ -136,10 +118,10 @@ export default function HomePage() {
           }
         >
           <CaseStudiesSection
-            caseStudies={publishedContent.caseStudies}
+            caseStudies={content.caseStudies}
             contentMeta={{
-              publishedAt: publishedContent.publishedAt,
-              sourceLabel: publishedContent.sourceLabel,
+              publishedAt: content.publishedAt,
+              sourceLabel: content.sourceLabel,
             }}
           />
         </Suspense>
@@ -153,7 +135,7 @@ export default function HomePage() {
           }
         >
           <QualificationSection
-            qualificationQuestions={publishedContent.qualificationQuestions}
+            qualificationQuestions={content.qualificationQuestions}
           />
         </Suspense>
 
@@ -166,10 +148,10 @@ export default function HomePage() {
           }
         >
           <TrustSection
-            trustItems={publishedContent.trustItems}
+            trustItems={content.trustItems}
             contentMeta={{
-              publishedAt: publishedContent.publishedAt,
-              sourceLabel: publishedContent.sourceLabel,
+              publishedAt: content.publishedAt,
+              sourceLabel: content.sourceLabel,
             }}
           />
         </Suspense>
@@ -183,8 +165,8 @@ export default function HomePage() {
           }
         >
           <BookingSection
-            projectTypeOptions={publishedContent.projectTypeOptions}
-            budgetOptions={publishedContent.budgetOptions}
+            projectTypeOptions={content.projectTypeOptions}
+            budgetOptions={content.budgetOptions}
           />
         </Suspense>
 
@@ -197,8 +179,8 @@ export default function HomePage() {
           }
         >
           <ContactSection
-            siteConfig={publishedContent.siteConfig}
-            legalLinks={publishedContent.legalLinks}
+            siteConfig={content.siteConfig}
+            legalLinks={content.legalLinks}
           />
         </Suspense>
       </main>

@@ -61,9 +61,9 @@ export default function ServicesSection({ services, contentMeta }) {
       title="Software delivery for quick wins, growth projects, and serious builds"
     >
       <p className="section-intro">
-        Start with the closest fit below. We handle urgent fixes, scoped delivery
-        sprints, and larger product work with clear scope, realistic pricing, and a
-        straightforward next step.
+        Start with the closest fit below. Automivex helps teams ship AI features,
+        workflow automation, Shopify improvements, SaaS products, and computer
+        vision solutions with clear scope and realistic pricing.
       </p>
 
       {!selectedService || !estimate ? (

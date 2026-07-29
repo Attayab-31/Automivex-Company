@@ -14,6 +14,7 @@ const LegalContentPage = lazy(() =>
 const ServiceLandingPage = lazy(() =>
   import("@/app/routes/ServiceLandingPage")
 );
+const ServicesPage = lazy(() => import("@/app/routes/ServicesPage"));
 
 function renderLazyPage(PageComponent, props = {}) {
   return (
@@ -50,6 +51,10 @@ export const appRouter = createBrowserRouter([
       {
         path: "cookies",
         element: renderLazyPage(LegalContentPage, { pageKey: "cookies" }),
+      },
+      {
+        path: "services",
+        element: renderLazyPage(ServicesPage),
       },
       {
         path: "services/:serviceKey",

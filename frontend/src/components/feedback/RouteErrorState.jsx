@@ -17,12 +17,12 @@ export function RouteErrorState() {
   }, [routeError]);
 
   return (
-    <main className="route-loader" id="main-content">
+    <main className="route-loader" id="main-content" aria-labelledby="route-error-title">
       <div className="container app-shell-error-card">
         <p className="eyebrow">Route Error</p>
-        <h1>We could not load this page.</h1>
+        <h1 id="route-error-title">We could not load this page.</h1>
         <p className="muted-note">
-          Please return to the homepage or try refreshing the current route.
+          The requested page may be temporarily unavailable. Please return to the homepage or try refreshing the route.
         </p>
         <a className="btn" href="/">
           Return Home

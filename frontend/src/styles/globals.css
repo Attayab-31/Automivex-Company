@@ -40,7 +40,7 @@ html {
 }
 
 body {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Inter", "Segoe UI", Roboto, system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
   color: var(--text);
   background:
     radial-gradient(1100px 520px at 82% -8%, color-mix(in oklab, var(--primary) 24%, transparent), transparent 72%),
@@ -133,7 +133,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Sora", sans-serif;
+  font-family: "Segoe UI", "Inter", Roboto, system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
 }
 
 .brand {
@@ -163,7 +163,7 @@ h4 {
 }
 
 .brand-text {
-  font-family: "Sora", sans-serif;
+  font-family: "Segoe UI", "Inter", Roboto, system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
   font-size: 1.1rem;
   letter-spacing: -0.5px;
   color: var(--text);
@@ -308,7 +308,7 @@ h4 {
   }
 }
 
-.nav-toggle > span:not(.nav-toggle-label) {
+.nav-toggle>span:not(.nav-toggle-label) {
   display: block;
   width: 18px;
   height: 2px;
@@ -323,15 +323,15 @@ h4 {
   font-weight: 700;
 }
 
-.nav-toggle.open > span:nth-of-type(1) {
+.nav-toggle.open>span:nth-of-type(1) {
   transform: translateY(6px) rotate(45deg);
 }
 
-.nav-toggle.open > span:nth-of-type(2) {
+.nav-toggle.open>span:nth-of-type(2) {
   opacity: 0;
 }
 
-.nav-toggle.open > span:nth-of-type(3) {
+.nav-toggle.open>span:nth-of-type(3) {
   transform: translateY(-6px) rotate(-45deg);
 }
 
@@ -725,7 +725,7 @@ h4 {
   margin-top: 20px;
 }
 
-.product-estimator > div {
+.product-estimator>div {
   border: 1px solid var(--stroke);
   border-radius: 16px;
   padding: 18px;
@@ -1236,6 +1236,7 @@ textarea:disabled {
 }
 
 @keyframes hero-float {
+
   0%,
   100% {
     transform: translateY(0);
@@ -1281,6 +1282,7 @@ textarea:disabled {
 }
 
 @media (max-width: 760px) {
+
   .cards-grid,
   .why-choose-grid,
   .product-estimator,
@@ -1340,7 +1342,7 @@ textarea:disabled {
   .hero-visual-shell,
   .mobile-nav-backdrop,
   .mobile-nav-panel,
-  .nav-toggle > span:not(.nav-toggle-label) {
+  .nav-toggle>span:not(.nav-toggle-label) {
     animation: none;
     transition: none;
   }
@@ -1496,7 +1498,7 @@ textarea:disabled {
   padding-left: 18px;
 }
 
-.policy-list li + li {
+.policy-list li+li {
   margin-top: 8px;
 }
 
@@ -1541,6 +1543,7 @@ textarea:disabled {
 }
 
 @media (max-width: 860px) {
+
   .policy-topbar,
   .policy-grid {
     grid-template-columns: 1fr;

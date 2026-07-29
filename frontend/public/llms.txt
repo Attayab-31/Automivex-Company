@@ -1,0 +1,17 @@
+# Automivex
+
+Automivex builds AI features, workflow automation, SaaS products, Shopify solutions, and computer vision systems for founders and growing teams.
+
+## Services
+- [AI Development](/services/ai)
+- [Workflow Automation](/services/automation)
+- [Computer Vision & OCR](/services/cv)
+- [Shopify Development](/services/shopify)
+- [SaaS Product Development](/services/saas)
+- [Quick Fixes & Support](/services/quick-wins)
+
+## Company
+- [Homepage](/)
+- [Privacy Policy](/privacy)
+- [Terms & Conditions](/terms)
+- [Cookie Policy](/cookies)

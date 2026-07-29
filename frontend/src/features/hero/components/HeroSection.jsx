@@ -8,17 +8,17 @@ export default function HeroSection({ heroContent }) {
   const contentAnimation = prefersReducedMotion
     ? {}
     : {
-        initial: { opacity: 0, y: 24 },
-        animate: { opacity: 1, y: 0 },
-        transition: { duration: 0.65 },
-      };
+      initial: { opacity: 0, y: 24 },
+      animate: { opacity: 1, y: 0 },
+      transition: { duration: 0.65 },
+    };
   const visualAnimation = prefersReducedMotion
     ? {}
     : {
-        initial: { opacity: 0, scale: 0.97 },
-        animate: { opacity: 1, scale: 1 },
-        transition: { duration: 0.75, delay: 0.05 },
-      };
+      initial: { opacity: 0, scale: 0.97 },
+      animate: { opacity: 1, scale: 1 },
+      transition: { duration: 0.75, delay: 0.05 },
+    };
 
   // Fallback values if content is not yet loaded
   const content = heroContent || {
@@ -31,10 +31,10 @@ export default function HeroSection({ heroContent }) {
   };
 
   return (
-    <section id="top" className="hero container">
+    <section id="top" className="hero container" aria-labelledby="hero-title">
       <motion.div {...contentAnimation} className="hero-left">
         <p className="eyebrow">{content.eyebrow}</p>
-        <h1>{content.title}</h1>
+        <h1 id="hero-title">{content.title}</h1>
         <p>{content.description}</p>
 
         <div className="hero-actions">

@@ -5,12 +5,13 @@ export const Section = memo(function Section({
   eyebrow,
   title,
   children,
+  ariaLabel,
 }) {
   return (
-    <section id={id} className="section">
+    <section id={id} className="section" aria-labelledby={ariaLabel || undefined}>
       <div className="container">
         <p className="eyebrow">{eyebrow}</p>
-        <h2>{title}</h2>
+        <h2 id={ariaLabel || undefined}>{title}</h2>
         {children}
       </div>
     </section>

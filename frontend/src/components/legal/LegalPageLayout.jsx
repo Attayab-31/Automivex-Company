@@ -29,9 +29,9 @@ export function LegalPageLayout({
           </nav>
         </header>
 
-        <section className="policy-hero">
+        <section className="policy-hero" aria-labelledby="legal-page-title">
           <p className="policy-eyebrow">{eyebrow}</p>
-          <h1>{title}</h1>
+          <h1 id="legal-page-title">{title}</h1>
           <p>{description}</p>
 
           <div className="policy-pill-row">

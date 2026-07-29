@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { frontendEnv } from "@/lib/env";
-import { syncAnalyticsConsent, trackEvent } from "@/lib/analytics";
 import { usePreferencesStore } from "@/shared/stores/preferencesStore";
 
 export function AnalyticsProvider() {
@@ -10,14 +9,20 @@ export function AnalyticsProvider() {
   const lastTrackedPathRef = useRef("");
 
   useEffect(() => {
-    syncAnalyticsConsent({
-      gaId: frontendEnv.gaId,
-      consent: cookieConsent,
+    if (!frontendEnv.gaId || typeof window === "undefined") {
+      return;
+    }
+
+    void import("@/lib/analytics").then(({ syncAnalyticsConsent }) => {
+      syncAnalyticsConsent({
+        gaId: frontendEnv.gaId,
+        consent: cookieConsent,
+      });
     });
   }, [cookieConsent]);
 
   useEffect(() => {
-    if (cookieConsent !== "accepted") {
+    if (cookieConsent !== "accepted" || !frontendEnv.gaId || typeof window === "undefined") {
       return;
     }
 
@@ -28,7 +33,10 @@ export function AnalyticsProvider() {
     }
 
     lastTrackedPathRef.current = nextPath;
-    trackEvent("page_view_custom", { page: nextPath });
+
+    void import("@/lib/analytics").then(({ trackEvent }) => {
+      trackEvent("page_view_custom", { page: nextPath });
+    });
   }, [cookieConsent, location.pathname, location.search]);
 
   return null;

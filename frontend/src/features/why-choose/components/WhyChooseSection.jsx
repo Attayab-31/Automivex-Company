@@ -1,4 +1,5 @@
 import { FaCogs, FaComments, FaLayerGroup, FaRocket, FaTools, FaUserCog } from "react-icons/fa";
+import { LogoIcon } from "@/components/Logo";
 import { trackEvent } from "@/lib/analytics";
 import { Section } from "@/shared/ui/Section";
 
@@ -23,7 +24,7 @@ export default function WhyChooseSection({ whyChooseContent }) {
 
       <div className="why-choose-grid">
         {content.points.map((point, index) => {
-          const Icon = icons[index] || FaLayerGroup;
+          const Icon = icons[index] || LogoIcon;
 
           return (
             <article key={point.title} className="why-card">

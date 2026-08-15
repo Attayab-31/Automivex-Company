@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { FaLock, FaServer, FaShieldAlt, FaTools } from "react-icons/fa";
+import { LogoIcon } from "@/components/Logo";
 import { StatusCard } from "@/components/feedback/StatusCard";
 import { Section } from "@/shared/ui/Section";
 import { formatDateLabel } from "@/shared/utils/formatDate";
@@ -23,7 +24,7 @@ export default function TrustSection({ trustItems, contentMeta }) {
   const activeTab = useMemo(() => {
     return trustItems.find((item) => item.id === activeTabId) || trustItems[0] || null;
   }, [activeTabId, trustItems]);
-  const Icon = trustIcons[activeTab?.iconKey] || FaShieldAlt;
+  const Icon = trustIcons[activeTab?.iconKey] || LogoIcon;
 
   return (
     <Section

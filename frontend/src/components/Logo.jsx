@@ -4,7 +4,7 @@
  * Uses CSS variables for color theming
  */
 
-export function LogoIcon({ size = 32 }) {
+export function LogoIcon({ size = 32, className = "" }) {
   return (
     <svg
       width={size}
@@ -12,7 +12,7 @@ export function LogoIcon({ size = 32 }) {
       viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="logo-icon"
+      className={`logo-icon ${className}`.trim()}
     >
       <defs>
         <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">

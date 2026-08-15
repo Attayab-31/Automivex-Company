@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { FaBrain, FaCogs, FaEye, FaRocket, FaShopify } from "react-icons/fa";
+import { LogoIcon } from "@/components/Logo";
 import { StatusCard } from "@/components/feedback/StatusCard";
 import { useServiceEstimate } from "@/features/services/hooks/useServiceEstimate";
 import { trackEvent } from "@/lib/analytics";
@@ -72,7 +73,7 @@ export default function ServicesSection({ services, contentMeta }) {
         <>
           <div className="cards-grid">
             {services.map((service) => {
-              const Icon = serviceIcons[service.iconKey] || FaRocket;
+              const Icon = serviceIcons[service.iconKey] || LogoIcon;
               const isSelected = service.key === selectedKey;
 
               return (

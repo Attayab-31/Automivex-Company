@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Seo } from "@/shared/ui/Seo";
 import { useSiteContentQuery } from "@/hooks/useSiteContentQuery";
 import { PageLoader } from "@/components/feedback/PageLoader";
@@ -39,6 +39,14 @@ export default function ServiceLandingPage() {
       />
       <main id="main-content" aria-labelledby="service-page-title">
         <Section>
+          <nav className="service-breadcrumb" aria-label="Breadcrumb">
+            <Link to="/">Home</Link>
+            <span aria-hidden="true">/</span>
+            <Link to="/services">Services</Link>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">{service.name}</span>
+          </nav>
+
           <div className="service-hero">
             <p className="eyebrow">{service.name}</p>
             <h1 id="service-page-title">{service.name}</h1>

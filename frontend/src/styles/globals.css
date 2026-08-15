@@ -1602,6 +1602,34 @@ textarea:disabled {
 }
 
 /* Service Landing Page Styles */
+.service-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 20px;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.service-breadcrumb a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.service-breadcrumb a:hover,
+.service-breadcrumb a:focus-visible {
+  color: var(--text);
+}
+
+.service-breadcrumb [aria-current="page"] {
+  color: var(--text);
+  font-weight: 700;
+}
+
 .service-hero {
   text-align: center;
   margin-bottom: 60px;
